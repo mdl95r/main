@@ -1,2 +1,2 @@
-# tv-master
+# tv-oskol
  http://tv-oskol.ru/
