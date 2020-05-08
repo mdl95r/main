@@ -75,6 +75,7 @@ h1 {
   color: #0061BE;
   font-weight: bold;
   border-bottom: 1px dashed #0061BE;
+  padding-bottom: 1px;
 }
 
 .contacts a:hover {
