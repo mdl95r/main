@@ -1,2 +1,2 @@
 # tv-oskol
- http://tv-oskol.ru/
+ https://tv-oskol.ru/
