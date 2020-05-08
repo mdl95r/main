@@ -1,0 +1,247 @@
+// импорируем различные переменные (цвет, шрифты)
+@import "_variables.scss";
+
+// главный контейнер попапа
+.popup {
+	// позиционирую
+	position: absolute;
+	top:0;
+	left:0;
+
+	// высота
+	height:100%;
+
+	// ширина
+	width:100%;
+	
+	// изначально скрываю
+	display:none;
+}
+
+// фон попапа
+.popup_bg {
+	// цвет фона
+	background:rgba(0,0,0,0.4);
+
+	// позиционирую
+	position: fixed;
+
+	// выравниваю по оси z
+	z-index:1;
+
+	// высота
+	height:100%;
+
+	// ширина
+	width:100%;
+}
+	
+// контейнер формы
+.form {
+	// позиционирую
+	position: fixed;
+	top: 50%;
+	left: 50%;
+
+	// выравниваю по центру окна
+	transform: translate(-50%, -50%);
+
+	// закругления
+	border-radius: 3%;
+
+	// выравниваю по оси z
+	z-index:2;
+
+	// ширина
+	width:450px;
+
+	// внутренний отступ
+	padding: 30px 20px;
+
+	// цвет фона формы
+	background: #f9f9f9;
+
+	// граница
+	border:1px solid #666;
+
+	// тень
+	box-shadow:0 0 2px rgba(0,0,0,0.5);
+
+	// поля ввода
+	input {
+		// ширина
+		width:96%;
+
+		// внутренний отступ
+		padding: 5px 15px;
+
+		// внешний отступ
+		margin: 10px 0;
+
+		// закругление
+		border-radius:20px;
+
+		// граница
+		border: 1px solid #b2b2b2;
+
+		// выравниваю по центру
+		text-align: center;
+	}
+	
+	// кнопка отправки формы
+	.submit_form {
+		// внутренний отступ
+		padding: 11px;
+
+		// фон кнопки
+		background: $orange;
+
+		// цвет текста
+		color: #fff;
+
+		// размер шрифта
+		font-size: 16px;
+
+		// делаю текст в верхнем регистре
+		text-transform: uppercase;
+
+		// жирный шрифт
+		font-weight: $bold;
+
+		// граница кнопки
+		border: 1px;
+
+		// ширина
+		width: 200px;
+
+		// закругление границы
+		border-radius: 20px;
+	}
+	
+	// заголовок формы
+	h2 {
+		// цвет шрифта
+		color: #4d4848;
+
+		// внешний отступ
+		margin-bottom: 15px;
+	}
+
+	// политика конфендициальности
+	.policy {
+		// текст соглашения
+		p {
+			// отступ сверху
+			margin-top: 10px;
+		}
+		// чекбокс
+		input[type="checkbox"] {
+			// ширина
+			width: 20px;
+		}
+	}
+	
+	// внешняя оболочка формы
+	.submit-outer {
+		// внутренние отступы
+		padding: 20px 0;
+
+		// выравниваю контент по центру
+		text-align: center;
+	}
+	
+	// поведени при наведении
+	.submit_form:hover {
+	// цвет фона
+	background: $orange_hover;
+
+	// переход между состоянием при дефолтном фоне и hover фоне
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	}
+}
+
+// кнопка закрыть
+.btn-close {
+	// цвет фона
+	background: rgba(0, 0, 255, 0);
+
+	// обнуляю границу
+	border: 0;
+
+	// позиционирую
+	position: absolute;
+	top: 5px;
+	right: 3px;
+
+	// ширина кнопки
+	width: 24px;
+
+	// высота кнопки
+	height: 24px;
+	
+	// убираю линию при фокусе и активном состоянии
+	&:active,
+	&:focus {
+		outline: none;
+	}
+	
+	// создаю элемент креста
+	&:before {
+		// обязательный параметр при псевдоэлементе before, генерируем содержание
+		content: "";
+
+		// ширина
+		width: 2px;
+
+		// высота
+		height: 25px;
+
+		// позиционирую
+		position: absolute;
+		right: 13px;
+		top: 0px;
+
+		// поворачиваю
+		transform: rotate(225deg);
+
+		// цвет фона
+		background: #9d9d9d;
+	}
+	
+	// создаю элемент креста
+	&:after {
+		// обязательный параметр при псевдоэлементе after, генерируем содержание
+		content: "";
+
+		// ширина
+		width: 25px;
+
+		// высота
+		height: 2px;
+
+		// позиционирую
+		position: absolute;
+		top: 11px;
+		right: 1px;
+
+		// поворачиваю
+		transform: rotate(45deg);
+
+		// цвет фона
+		background: #9d9d9d;
+	}
+}
+
+.popup-main {
+	.btn-close {
+		// позиционирую
+		top: 0;
+		right: 0;
+	}
+}
+
+

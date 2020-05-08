@@ -1,0 +1,118 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .btn-off {
+    display: none;
+  }
+  .contacts {
+    display: none;
+  }
+  .brand-site {
+    display: none;
+  }
+  .footer-bar {
+    margin-bottom: 20px;
+  }
+  .background-tv {
+    margin-bottom: 15px;
+  }
+  .description p {
+    font-size: 16px;
+  }
+  .description img {
+    width: 300px;
+  }
+  .description .call-button {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  section {
+    margin-bottom: 40px;
+  }
+  .header-nav {
+    padding: 0;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .header-nav .contacts {
+    display: inline-block;
+    line-height: 1.5;
+  }
+  .header-nav .time {
+    font-size: 13px;
+  }
+  .header-nav img {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    display: inline-block;
+    width: 45px;
+  }
+  .header-nav #pull:after {
+    content: "";
+    background: url("../img/nav-btn.svg") no-repeat;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: contain;
+  }
+  .brand-site.footer {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .menu {
+    display: none;
+    border: 1px solid #eee;
+    padding-top: 10px;
+  }
+  .menu a {
+    display: block;
+  }
+  .menu li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  .menu li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: none;
+  }
+  .adress-contacts {
+    margin-top: 10px;
+  }
+  .map-container {
+    margin-bottom: 20px;
+  }
+  .header-bar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-menu {
+    display: inline-block;
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+  }
+  .footer-menu li {
+    margin-bottom: 5px;
+  }
+  .footer-menu li:nth-child(even) {
+    margin-bottom: 0;
+  }
+  .form {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=media.css.map */

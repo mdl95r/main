@@ -1,0 +1,226 @@
+// импорируем различные переменные (цвет, шрифты)
+@import "_variables.scss";
+
+header a:hover {
+    text-decoration: none;
+}
+
+// главный заголовок
+h1 {
+    // размер шрифта
+    font-size: 27px;
+    
+    // выравниваю по центру
+    text-align: center;
+    
+    // внешний отступ снизу
+    margin-bottom: 2.5rem;
+    
+    // цвет шрифта
+	color: $blue;
+}
+
+// верхний бар
+.header-bar {
+    // внутренний отступ
+	padding: 10px 0 10px;
+}
+
+// блок логотипа сайта
+.brand-site__logo {
+
+    // отображаю на ширину блока
+    display: inline-block;
+    // внешний отступ
+	margin-right: 10px;
+
+    // логотип
+    img  {
+        // ширина
+        width: 55px;
+        
+        // выравниваю вертикально
+		vertical-align: baseline;
+	}
+}
+
+// блок с описанием к логотипу
+.brand-site__desc {
+        // отображаю на ширину блока
+        display: inline-block;
+        
+        // межстрочный интервал
+	    line-height: 2;
+
+    // жирный шрифт "Ремонт телевизоров"
+    strong {
+        // размер шрифта
+        font-size: 19px;
+
+        // фраза ремонт
+        span {
+            color: $orange;
+        }
+    }
+    
+    // описание
+    p {
+        // размер шрифта
+   	 	font-size: 15px;
+	}	
+}
+
+// кнопка вызвать мастера
+.call-button {
+        //внутренний отступ
+        padding: 15px;
+
+    .callback {
+        //внутренний отступ
+        padding: 11px;
+        //фон
+        background: $orange;
+        //закругления
+        border-radius: 15px;
+        //цвет шрифта 
+        color: #fff;
+        //размер шрифта
+        font-size: 16px;
+        //делаю буквы заглавными
+        text-transform: uppercase;
+        //делаю жирным шрифт
+        font-weight: $bold;
+        //принаведении показываю курсор
+        cursor: pointer;
+}
+
+    // поведение при наведении на кнопку
+    .callback:hover {
+        //фон кнопки
+        background: $orange_hover;
+
+        //делаю переход принаведении 
+        transition: all .9s ease;
+        -webkit-transition: all .9s ease;
+        -moz-transition: all .9s ease;
+        -ms-transition: all .9s ease;
+        -o-transition: all .9s ease;
+    }
+}
+
+// блок контакты
+.contacts {
+        // отображаю на ширину блока
+        display: inline-block;
+        
+        // межстрочный интервал
+        line-height: 2;
+        
+        // выравниваю текст слева
+        text-align: left;
+        
+    // ссылка телефона
+	a {
+        // размер шрифта
+        font-size: 19px;
+        
+        // цвет ссылки
+        color: $blue;
+        
+        // делаю жирным шрифт
+        font-weight: $bold;
+        
+        // подчеркивание телефона
+        border-bottom: 1px dashed $blue;
+	}
+
+    // ссылка телефона при наведении
+	a:hover {
+        color: $blue_hover;
+    }
+    // описание
+	p {
+        // размер шрифта
+    	font-size: 15px;
+	}
+}
+
+// навигационное меню
+.header-nav {
+        // позиционируем
+        position: relative;
+
+        // перемещаем элемент по оси z
+    	z-index: 1;
+        
+        // цвет фона
+        background: #fafafa;
+        
+        // внутренний отступ
+        padding: 10px;
+        
+        // закругление
+        border-radius: 6px;
+        
+        // граница
+        border: 1px solid #eee;
+        
+        // высота
+	    height: 50px;
+	// скрываем изначально контакты для моб. версии
+	.contacts {
+		display: none;
+	}
+
+    // скрываем логотип изначально для моб. версии
+	img {
+		display: none;
+	}
+}
+
+// кнопка бургера
+#pull {
+    // позиционируем
+	position: absolute;
+    right: 5px;
+    top: 5px;
+
+    // цвет фона
+    background: #fafafa;
+
+    // убираем границу
+    border: none;
+
+    // убираем линию
+    outline: none;
+}
+
+// меню
+.menu {
+        // выравниваем в строчку
+        display: flex;
+        
+        // распределяем меню равномерно по строке
+        justify-content: space-around;
+        
+        // цвет меню
+		background: rgb(250, 250, 250);
+
+    // ссылки меню
+	a { 
+        // размер шрифта
+        font-size: 18px;
+        
+        // цвет шрифта
+        color: $blue2;
+        
+        // делает текст заглавными буквами
+	    text-transform: uppercase;
+    }
+
+    // поведние ссылок при наведении
+    a:hover {
+        // цвет ссылки
+		color: $blue_hover;
+	}
+}

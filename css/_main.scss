@@ -1,0 +1,318 @@
+@import "_variables.scss";
+
+// все секции
+section {
+    // внешний отступ
+    margin-bottom: 70px;
+}
+
+// все заголовки h2
+h2 {
+    // выравниваю по центру
+    text-align: center;
+
+    // внешний отступ
+    margin-bottom: 2.5rem;
+
+    // цвет текста
+    color: $primary-color;
+
+    // цвет шрифта отрывка из заголовка
+    span {
+        color: $blue;
+    }
+}
+
+// класс отвечает за сдвиг контента при показе меню на мою. версии
+.down {
+    // внешний отступ
+    margin-bottom: 140px;
+}
+
+// секция с описанием и картинкой
+.description {
+    // внутренний отступ
+    padding-top: 1.5rem;
+    // скрываем кнопку изначально
+    .call-button {
+        display: none;
+    }
+
+    // описание у блока
+    p {
+        // размер шрифта
+        font-size: 17px;
+
+        // внешний отступ
+        margin-bottom: 10px;
+    }
+}
+
+// список как мы работаем
+.work-list {
+    // внешний отступ
+    margin-bottom: 1.5rem;
+}
+
+// секции преимущества и отзывы
+.advantages,
+.reviews {
+    // цвет фона
+    background: #f7f7f7;
+
+    // внутренний отступ
+    padding: 10px;
+
+    // граница
+    border: 10px dotted #fff;
+}
+
+// значок вк
+.vk:before {
+    // спец. свойство для данного псевдоселектора
+    content: "";
+
+    // изображение без повторений
+    background: url("../img/vk-brands.svg") no-repeat;
+
+    // внутренний отступ
+    padding-left: 40px;
+
+    // непрозрачность
+    opacity: .4;
+}
+
+.tel:before {
+    // спец. свойство для данного псевдоселектора
+    content: "";
+
+    // изображение без повторений
+    background: url("../img/phone-alt-solid.svg") no-repeat;
+
+    // внутренний отступ
+    padding-left: 25px;
+
+    // размер шрифта
+    font-size: 13px;
+
+    // непрозрачность
+    opacity: .4;
+}
+
+// отступ у логотипа в секции адресс
+.adress .brand-site {
+    margin-bottom: 20px;
+}
+
+.adress-contacts {
+    // заголовок
+    h3 {
+        font-size: 20px;
+    }
+    
+    // адресс
+    p {
+        margin-bottom: 10px;
+    }
+
+    // убираю у группы вк и телефона при наведении подчеркивание
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+// отзывы
+.reviews  {
+    // иконки отзывов
+    img {
+        // закругляю
+        border-radius: 50%;
+
+        // ширина
+        width: 68px;
+
+        // высота
+        height: 68px;
+
+        // внешний отступ
+        margin: 0 auto 20px;
+    }
+}
+
+// отзыв
+.review-item {
+    // граница
+    border: 2px dashed #e4e4e4;
+
+    // внутренний отступ
+    padding: 10px;
+}
+
+// футер
+footer {
+    // внутренний отступ
+	padding-bottom: 20px;
+}
+
+// бар с меню
+.footer-bar {
+    // внешний отступ
+    margin-bottom: 40px;
+}
+
+// меню
+.footer-menu {
+    // отображаем с помощью флекса
+    display: flex;
+    
+    // распределяем элементы по ширине
+	justify-content: space-around;
+}
+
+// инофрмация в футере
+.footer-info p {
+    // внешний отступ
+    margin-bottom: 10px;
+}
+
+// применяем к картинке ширину с приоритетом
+.owl-carousel .owl-item img {
+	width: 68px !important;
+}
+
+// Кнопка вверх
+.up {
+    // изначально скрываем
+    display: none;
+    
+    // позиционируюем
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    // ширина
+    width: 36px;
+
+    // высота
+    height: 36px;
+
+    // цвет фона, прозрачный
+    background: rgba(0, 0, 0, 0.4);
+
+    // порядок по оси z
+    z-index: 3;
+
+    // закругление у границ
+    border-radius: 3px;
+
+    // поведение при наведении
+    cursor: pointer;
+}
+
+.up:before {
+    // спец. свойство для данного псевдоселектора
+    content: '';
+
+    // позиционирую
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    // ширина
+    width: 12px;
+
+    // высота
+    height: 12px;
+    
+    // внешний отступ
+    margin: -4px 0 0 -6px;
+
+    // граница
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+
+    // поворачиваю элементы для создания стрелки
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+// быстрый вызов мастера
+.popup-main {
+    // скрываю изначально
+    display: none;
+
+    // ширина
+    width: 100%;
+
+    // внетренний отступ
+    padding: 10px;
+
+    // цвет фона
+    background: #f9f9f9;
+
+    // позиционирую
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    // граница
+    border: 1px solid #d6d6d6;
+
+    // порядок отображения по оси z
+    z-index: 2;
+
+    // центрирую форму
+    form {
+        text-align: center;
+    }
+
+    // делаю подпись большим шрифтом
+    label {
+        font-size: 19px;
+
+        // меняю цвет
+        color: $primary-color;
+    }
+
+    // кнопка отправить
+    .callback {
+        // убираю границу
+        border: none;
+
+        // добавляю расстояния между кнопок
+        letter-spacing: 1.2px;
+
+        // внутренний отступ
+        padding: 6px;
+    }
+
+    // внутренний отступ к контейнеру кнопки
+    .call-button  {
+        padding: 10px 0 0; 
+    }
+}
+
+// поле для телефона
+#phone-number {
+    // выравниваю по центру
+    text-align: center;
+
+    // граница
+    border: 1px solid #b2b2b2;
+
+    // внутренний отступ
+    padding-left: 5px;
+
+    // загругление границы
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+// форма успешно отправлена
+.form-ok {
+    // скрываю изначально
+    display: none;
+}

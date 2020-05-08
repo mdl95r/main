@@ -1,0 +1,13 @@
+div.popup
+	div.popup_bg
+	div.form
+		button.btn-close(title='Закрыть (Esc)' type='button') ×
+		h2 Оставить заявку
+		form(name='form' action='https://formspree.io/mqkbbnwy' enctype='multipart/form-data' method='post')
+			input#name(type='text' name='name' placeholder='Как к вам обращаться?*' required title="Ваше имя")
+			input#tel(type='tel' name='phone' pattern='8\\([0-9]{3}\\)[0-9]{3}-[0-9]{2}-[0-9]{2}' oninvalid="this.setCustomValidity('Введите пожалуйста номер телефона')" oninput="setCustomValidity('')" placeholder='Телефон для связи*' value='' required maxlength='12' inputmode='numeric' title="Ваш телефон")
+			input.submit_form(type='submit' value='Отправить' title="Отправить заявку")
+		div.different
+			input(type='checkbox' required checked)
+			span Я согласен с политикой конфиденциальности
+			p Поля, отмеченные *, обязательны для заполнения.

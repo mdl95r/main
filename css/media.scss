@@ -1,0 +1,217 @@
+@media (min-width: 1200px) {
+    // изменяем ширину контейнера
+    .container {
+        max-width: 980px;
+    }
+}
+
+
+@media only screen and (max-width : 992px) {
+    // скрываем кнопку
+    .btn-off {
+        display: none;
+    }  
+
+    // сркрываем контакты
+    .contacts {
+        display: none;
+    }
+
+    // скрываем логотип сайта
+    .brand-site {
+        display: none;
+    }
+
+    // изменяем внешний отступ
+    .footer-bar {
+        margin-bottom: 20px;
+    }
+    
+    // изменяем внешний отступ
+    .background-tv {
+        margin-bottom: 15px;
+    }
+    
+    .description {
+        // задаем тексту размер
+        p {
+            font-size: 16px;
+        }
+
+        // задаем изображению размер
+        img {
+            width: 300px;
+        }
+
+        // показываем кнопку
+        .call-button {
+            display: block;
+        }
+    }
+}
+  
+@media only screen and (max-width : 769px) {
+    // для всех секций изменяем нижний внешний отступ
+    section {
+        margin-bottom: 40px;
+    }
+    
+    // навигация в шапке
+    .header-nav {
+        // обнуляю отступ
+        padding: 0;
+
+        // меняю высоту
+        height: 50px;
+
+        // внешний отступ
+        margin-top: 10px;
+
+        // выравниваю по центру
+        text-align: center;
+
+        // контакты
+        .contacts {
+            // отображаю контакты
+            display: inline-block;
+
+            // межстроковый интервал
+            line-height: 1.5; 
+        }
+
+        // время
+        .time {
+            // размер шрифта
+            font-size: 13px;
+        }
+
+        // картинка телека
+        img {
+            // позиционирую
+            position: absolute;
+            top: 2px;
+            left: 6px;
+
+            // отображаю
+            display: inline-block;
+
+            // ширина
+            width: 45px;
+        }
+
+        #pull:after {
+            // спец. свойство для данного псевдоселектора
+            content:"";
+
+            // фоновое изображение
+            background: url('../img/nav-btn.svg') no-repeat;
+            
+            // позиционирую
+            position: absolute;  
+            right: 15px;
+            top: 8px;
+
+            // ширина
+            width: 22px;
+
+            // высота
+            height: 22px;
+
+            // отображаю
+            display: inline-block;  
+
+            // позиционирую изображение
+            background-size: contain;
+        }
+    }
+
+    // логотип в футере
+    .brand-site.footer {
+        // отображаю
+        display: block;
+
+        // внутренний отступ
+        padding-bottom: 10px;
+    }
+
+    // меню
+    .menu {
+        // скрываю меню
+        display: none;
+
+        // граница
+        border: 1px solid #eee;
+
+        // внутренний отступ
+        padding-top: 10px;
+
+        a {
+            // делаем ссылки на всю ширину
+            display: block;
+        }
+
+        li {
+            // внешний отступ
+            margin-bottom: 10px;
+
+            // граница
+            border-bottom: 1px solid #eee;
+
+            // последний пункт меню
+            &:last-child {
+                // обнуляем отступ
+                margin-bottom: 0;
+
+                // внутренний отступ
+                padding-bottom: 5px;
+
+                // граница
+                border-bottom: none;
+            }
+        }
+    }
+
+    // адрес
+    .adress-contacts {
+        // внешний отступ
+        margin-top: 10px;
+    }
+
+    .map-container {
+        // внешний отступ
+        margin-bottom: 20px;
+    }
+    
+    .header-bar {
+        // скрываем данный блок
+        display: none;
+    }
+}
+  
+@media only screen and (max-width : 576px) {
+    // меню в футере
+    .footer-menu {
+        // показываю
+        display: inline-block;
+
+        // показываю меню в 2 колонки
+        column-count: 2;
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+
+        // добавляю внешний отступ
+        li {
+            margin-bottom: 5px;
+
+            // убираю у четных пунктов отступ
+            &:nth-child(even) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // форма
+    .form {
+        width: 100%;
+    }
+}

@@ -1,0 +1,84 @@
+@import "_variables.scss";
+
+// таблица
+.table {
+    margin-bottom: 0;
+}
+
+// аккордеон
+#accordeon {
+    margin-bottom: 30px;
+}
+
+// шапка аккордеона
+.acc-head {
+    // поведение при наведении
+    cursor: pointer;
+    
+    // размер шрифта
+    font-size: 16px;
+    
+    // делаем жирным шрифт
+    font-weight: 600;
+
+    // выравниваем по центру
+    text-align: center;
+
+    // внутренний отступ
+    padding: 10px;
+
+    // граница
+    border: 1px solid #c0c0c0;
+
+    // обнуляю внешний отступ
+    margin-bottom: 0;
+
+    // цвет фона
+    background: #f3f3f3;
+
+    // цвет шрифта
+    color: #43565f;
+
+    // убираю границу
+    &:first-of-type {
+    	border-bottom: 0;
+    }
+}
+
+// добавляю через псевдоэлемент плюс
+.acc-head:after {
+    //обязательный параметр для данного псевдоэлемента
+    content: '+';
+
+    //позиционирую
+    position: absolute;
+    right: 25px;
+
+    //размер шрифта
+    font-size: 15px;
+    transition: all .8s;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -ms-transition: all .8s;
+    -o-transition: all .8s;
+}
+
+// добавляю класс при клике
+.acc-head.change:after {
+    //обязательный параметр для данного псевдоэлемента
+    content: '-';
+    transition: all .8s;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -ms-transition: all .8s;
+    -o-transition: all .8s;
+}
+
+// скрываю по умолчанию тело аккордиеона
+.acc-body {
+	display: none;
+}
+
+.test {
+    margin-bottom: 10px;
+}

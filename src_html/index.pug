@@ -1,0 +1,291 @@
+html
+	head
+		meta(charset = 'utf-8')
+		meta(name='viewport', content="initial-scale=1.0, width=device-width")
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic" rel="stylesheet")
+		link(rel='stylesheet', href='css/styles.css')
+		link(rel='stylesheet', href='css/media.css')
+		//- link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+		script( type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+		script(src="js/menu.js")
+		script(src="js/scroll.js")
+		script(src="js/sliders.js")
+		script(src="js/owl-carousel.js")
+		script(src="js/ajax.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js")
+		script(src="js/form.js")
+		link(rel='stylesheet', href='libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')
+		link(rel='stylesheet', href='libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css')
+		script(src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js")
+		title Телемастер в Старом Осколе
+	body
+		header.header#header
+			div.container
+				div.header-bar
+					div.row.no-gutters
+						div.col-md-5.text-center.text-lg-left.order-md-2.order-lg-1
+							div.brand-site
+								div.logo
+									img(src="img/logo1.png" alt="ЛОГОТИП")
+								div.desc
+									h1 
+										span(style = "color: #f38d38;") Ремонт 
+										span телевизоров
+									p Старый Оскол и пригород
+						div.col-md-3.order-md-1.order-lg-2
+							div#btn-fade-off.call-button
+								span.callback(onclick="showPopup();") Вызвать мастера
+						div.col-md-4.text-lg-right.order-md-3.order-lg-3
+							div.contacts
+								span.phoneNumber 
+									a(href="tel:+79103664197") 8 (910) 366-41-97
+								p.time Работаем с 9:00 до 19:00
+				nav.nav-menu
+					img(src="img/logo1.png" alt="ЛОГОТИП")
+					div.contacts
+						span.phoneNumber 
+							a(href="tel:+79103664197") +7 (910) 366-41-97
+						p.time Работаем с 9:00 до 19:00
+					a#pull(href='#')
+					ul.menu#menu
+						li.menu-item
+							a(href="#price" class="menu-item__link") Цены
+						li.menu-item
+							a(href="#advantages" class="menu-item__link") Преимущества
+						li.menu-item
+							a(href="#adress" class="menu-item__link") Контакты
+						li.menu-item
+							a(href="#reviews" class="menu-item__link") Отзывы
+		main
+			include form.pug
+			div.container
+				section.description
+					div.row.justify-content-center.align-items-center.no-gutters
+						div.col-md-6
+							h2 Ремонт телевизоров в Старом Осколе
+
+							p Устраним любую неполадку телевизора за один день с гарантией до 6 месяцев.
+
+							p Наши опытные мастера точно определят характер поломки, подберут необходимые детали для замены и быстро отремонтируют вышедшее из строя оборудование.
+						div.col-md-6
+							div.background-tv
+								img(src="img/bg-tv-first.jpg" alt="Телемастер")
+						div.col-12.text-center
+							div.call-button
+								span.callback(onclick="showPopup();") Вызвать мастера
+				section.price#price
+					h2 
+						span(style='color: #0061BE;') Цены 
+						span на ремонт телевизоров в Старом Осколе:
+					div.row.justify-content-center.align-items-center
+						div.col-md-8
+							div#accordeon
+								h3.acc-head ЖК телевизоры
+								div.acc-body
+									table.table.table-striped.text-center.table-bordered
+										thead
+											tr
+												th(scope='col') Разрешение экрана
+												th(scope='col') Цена
+										tbody
+											tr
+												td 5-14"
+												td от 1 100 руб.
+											tr
+												td 15-16"
+												td 1 300-1 400 руб.
+											tr
+												td 17-19""
+												td от 1 600 руб.
+											tr
+												td 20-22"
+												td от 1 800 руб.
+											tr
+												td 23-25"
+												td 2 000-2 100 руб.
+											tr
+												td 26-28"
+												td 2 400-2 600 руб.
+											tr
+												td 29-34"
+												td 2 900-3 100 руб.
+											tr
+												td 35-39"
+												td 3 200-3 400 руб.
+											tr
+												td 40-42"
+												td от 3 700 руб.
+											tr
+												td 43-45"
+												td 4 600-5 000 руб.
+											tr
+												td 46-47"
+												td от 5 200 руб.
+								h3.acc-head Плазменные телевизоры
+								div.acc-body
+									table.table.table-striped.text-center.table-bordered
+										thead
+											tr
+												th(scope='col') Разрешение экрана
+												th(scope='col') Цена
+										tbody
+											tr
+												td 5-14"
+												td от 1 100 руб.
+											tr
+												td 15-16"
+												td 1 300-1 400 руб.
+											tr
+												td 17-19""
+												td от 1 600 руб.
+											tr
+												td 20-22"
+												td от 1 800 руб.
+											tr
+												td 23-25"
+												td 2 000-2 100 руб.
+											tr
+				section.advantages#advantages
+					h2 Почему 
+						span(style='color: #0061BE;') выгодно 
+						span обратиться к нам:
+					ul.advantages-list
+						div.row
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/reas-home.png" alt="Адресность")
+									h3 Адресность
+									p Весь комплекс диагностических и ремонтных работ выполняется на дому
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/reas-rocket.png" alt="Оперативность")
+									h3 Оперативность
+									p Мастер готов выехать по адресу сразу после принятия заявки
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/reas-instr.png" alt="Адресность")
+									h3 Комплексность
+									p Наши мастера приезжают на объект с необходимыми запчастями, и вам не придется тратить время на поиск необходимой детали
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/reas-proffi.png" alt="Адресность")
+									h3 Экспертность
+									p Ремонт телевизоров выполняют опытные мастера с российским гражданством	
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/reas-home.png" alt="Адресность")
+									h3 Адресность
+									p Весь комплекс диагностических и ремонтных работ выполняется на дому
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/reas-rocket.png" alt="Оперативность")
+									h3 Оперативность
+									p Мастер готов выехать по адресу сразу после принятия заявки
+				section.how-work
+					h2 
+						span(style='color: #0061BE;') Как 
+						span мы работаем:
+					ul.work-list
+						div.row
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/1.png" alt="Адресность")
+
+									p Позвоните нам. Назовите модель TV и поломку. Мы проконсультируем о стоимости ее устранения.
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/2.png" alt="Оперативность")
+
+									p Мастер приезжает, разбирает телевизор и устанавливает точную причину неисправности.
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/3.png" alt="Адресность")
+
+									p Мастер сообщает владельцу точную стоимость и сроки ремонта.
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/4.png" alt="Адресность")
+
+									p После получения от вас одобрения, мастер ремонтирует TV и составляет гарантийный талон.
+							div.col-sm-6.col-lg-4.text-center
+								li
+									img(src="img/5.png" alt="Адресность")
+
+									p При сложных поломках, мастер может забрать телевизор в сервис-центр, а по готовности - привезти обратно.
+					div.row
+						div.col-12.text-center
+							div.call-button
+								span.callback(onclick="showPopup();") Вызвать мастера
+				section.adress#adress
+					h2 
+						span(style='color: #0061BE;') Где 
+						span мы находимся:
+					div.row
+						div.col-md-6.col-lg-8.text-center
+							div.map-container
+								iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A38028a1009efe8fc124e7a966d41e3d5d3d6f568aa1dc2495ae55679114fe4c7&source=constructor' width='664' height='518' frameborder='0')
+						div.col-md-6.col-lg-4.text-center.text-lg-center.align-self-lg-center
+							div.brand-site
+								div.logo
+									img(src="img/logo1.png" alt="ЛОГОТИП")
+								div.desc
+									h1 
+										span(style = "color: #f38d38;") Ремонт 
+										span телевизоров
+									p Старый Оскол и пригород
+							div.adress-contacts
+								h3 Контакты:
+								p Адрес: Старый Оскол, Солнечный микрорайон, 34
+								p
+									a(href="tel:+79103664197" class="tel") +7 (910) 366-41-97
+								a(href="https://vk.com/remont.tvoskol" target="_blank" class="vk") Мы в контакте
+				section.reviews#reviews
+					h2 Ваши отзывы:
+					div.row
+						div.col-12
+							div.owl-carousel.owl-theme
+								div.review-item
+									img(src="img/nophoto.jpg" alt="Отзывы")
+									p Александр
+									p Мастер сервисного центра быстро приезжает на вызов, делает полную диагностику, которая предоставляется бесплатно. Ремонт тоже выполняется оперативно. На моем телевизоре заменили блок питания за полтора часа.
+								div.review-item
+									img(src="img/nophoto.jpg" alt="Отзывы")
+									p Сергей
+									p Услуги мастеров сервисного центра оставили только приятное впечатление. Мастер подробно объяснил, что сломалось, рассчитал и согласовал со мной цену, установил качественные запчасти. Также он дал гарантийный талон, поэтому я абсолютно не боюсь новых поломок.
+				div.up
+		footer
+			div.container
+				div.footer-bar
+					div.row.no-gutters
+						div.col-lg-4.text-md-center.text-lg-left.text-center
+							div.logo
+								img(src="img/logo1.png" alt="ЛОГОТИП")
+							div.desc
+								h1 
+									span(style = "color: #f38d38;") Ремонт 
+									span телевизоров
+								p Старый Оскол и пригород
+						div.col-lg-8.text-center.align-self-lg-center
+							nav.footer-nav
+								ul.footer-menu
+									li
+										a(href="#price" class="menu-item__link") Цены
+									li
+										a(href="#advantages" class="menu-item__link") Преимущества
+									li
+										a(href="#adress" class="menu-item__link") Контакты
+									li
+										a(href="#reviews" class="menu-item__link") Отзывы
+				div.row
+					div.col-lg-6.text-center.text-lg-left
+						p 2020 
+							strong Ремонт телевизоров в Старом Осколе
+						p © Все права защищены
+					div.col-lg-6.text-center.text-lg-right
+						p Сайт не является публичной офертой
+						p
+							a(href="#") Политика конфиденциальности
+				div.row
+					div.col-12.text-center
+						a(href="#") Разработано

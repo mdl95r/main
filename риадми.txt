@@ -1,0 +1,2 @@
+pug -w index.pug
+gulp sass
