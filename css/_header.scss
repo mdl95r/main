@@ -131,7 +131,7 @@ h1 {
         font-weight: $bold;
         
         // подчеркивание телефона
-        border-bottom: 1px dashed $blue;
+        border-bottom: 1px dashed #0061beb5;
 
         padding-bottom: 1px;
 	}
@@ -201,8 +201,13 @@ h1 {
 .menu {
         // выравниваем в строчку
         display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         
         // распределяем меню равномерно по строке
+        justify-content: space-around; 
+        -webkit-justify-content: space-around;
         justify-content: space-around;
         
         // цвет меню
